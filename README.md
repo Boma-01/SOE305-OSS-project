@@ -60,8 +60,16 @@ The project follows a modular structure to ensure different group members can wo
 
 ## Troubleshooting
 
-*   **Stuck on "Downloading Windows tools"**:
-    The first time you run on Windows, Flutter tries to download build tools (Visual Studio) which can be very large (gigabytes).
-    **Fix**: Press `Ctrl+C` in the terminal to stop it, then run with `-d chrome` to use the web browser instead.
+### Phantom C++ Errors in VS Code
+If you see red squiggles in files like `linux/runner/my_application.h` or `windows/runner/main.cpp` while working on a different OS, these are **IntelliSense mismatches** and do not affect the app's functionality.
 
-*   **Images not loading**: Check your internet connection.
+**Solution implemented:**
+- I have added a `.vscode/settings.json` file to the project.
+- This file hides non-active platform folders (like `linux`, `ios`, `macos`) from the sidebar and disables C++ error squiggles for them.
+- If you need to see these folders, you can modify the `files.exclude` setting in `.vscode/settings.json`.
+
+### Build Issues
+If you encounter build errors after merging changes:
+1. Run `flutter clean`
+2. Run `flutter pub get`
+3. Run `flutter run`
