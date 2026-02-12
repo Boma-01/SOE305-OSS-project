@@ -1,9 +1,16 @@
+// presentation/screens/hostel_details_screen.dart
+// 
+// Purpose: Room selection for a specific hostel.
+// Responsibility: Displays available rooms and types (4-Man, 2-Man) for a chosen hostel.
+// Navigation: Success -> RoomDetailScreen
+
 import 'package:flutter/material.dart';
 import '../../core/theme/app_theme.dart';
 import '../../data/mock_data.dart';
-import 'room_detail_screen.dart'; // Navigate to Room Detail (Screen 6)
+import 'room_detail_screen.dart'; 
 
-// This Screen matches HTML 5 (Room Selection / Hostel Details)
+/// Room selection interface with filtering and availability status.
+// [LABEL: HOSTEL DETAILS SCREEN] - Shows rooms available in a specific hostel.
 class HostelDetailsScreen extends StatefulWidget {
   final Hostel hostel;
 
@@ -118,7 +125,7 @@ class _HostelDetailsScreenState extends State<HostelDetailsScreen> {
                         borderRadius: BorderRadius.circular(50),
                         border: isSelected ? null : Border.all(color: isDark ? Colors.white10 : Colors.grey.shade200),
                         boxShadow: isSelected 
-                           ? [BoxShadow(color: AppTheme.primaryColor.withOpacity(0.2), blurRadius: 4, offset: const Offset(0, 2))]
+                           ? [BoxShadow(color: AppTheme.primaryColor.withValues(alpha: 0.2), blurRadius: 4, offset: const Offset(0, 2))]
                            : null,
                       ),
                       child: Text(
@@ -158,7 +165,7 @@ class _HostelDetailsScreenState extends State<HostelDetailsScreen> {
                       border: Border.all(color: isDark ? Colors.white10 : Colors.grey.shade100),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.05),
+                          color: Colors.black.withValues(alpha: 0.05),
                           blurRadius: 4,
                           offset: const Offset(0, 2),
                         ),
@@ -185,7 +192,7 @@ class _HostelDetailsScreenState extends State<HostelDetailsScreen> {
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                                   decoration: BoxDecoration(
-                                    color: isDark ? Colors.black87 : Colors.white.withOpacity(0.9),
+                                    color: isDark ? Colors.black87 : Colors.white.withValues(alpha: 0.9),
                                     borderRadius: BorderRadius.circular(50),
                                   ),
                                   child: Row(
@@ -354,7 +361,7 @@ class _HostelDetailsScreenState extends State<HostelDetailsScreen> {
   IconData _getAmenityIcon(String name) {
     if (name.contains('WiFi')) return Icons.wifi;
     if (name.contains('Fan')) return Icons.mode_fan_off;
-    if (name.contains('Desk')) return Icons.desk; // Check if available, fallback below
+    if (name.contains('Desk')) return Icons.table_restaurant;
     if (name.contains('A/C')) return Icons.ac_unit;
     if (name.contains('Ensuite')) return Icons.shower;
     return Icons.check_circle_outline;

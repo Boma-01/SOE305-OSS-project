@@ -1,9 +1,16 @@
+// presentation/screens/sign_in_screen.dart
+// 
+// Purpose: Authentication entry point.
+// Responsibility: Allows existing students to log in using their credentials.
+// Navigation: Login -> MainScreen | "Sign Up" -> RegistrationScreen
+
 import 'package:flutter/material.dart';
 import '../../core/theme/app_theme.dart';
-import '../../data/mock_data.dart';
 import 'registration_screen.dart';
 import 'main_screen.dart';
 
+/// Primary login interface for the hostel reservation system.
+// [LABEL: SIGN IN SCREEN] - Handles user authentication.
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
 

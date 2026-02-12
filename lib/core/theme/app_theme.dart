@@ -1,3 +1,8 @@
+// core/theme/app_theme.dart
+// 
+// Purpose: Centralized theme configuration for the application.
+// Responsibility: Defines the "FUTO Green" color palette and standard widget styles.
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,7 +21,6 @@ class AppTheme {
       colorScheme: ColorScheme.fromSwatch().copyWith(
         primary: primaryColor,
         secondary: primaryColor,
-        background: backgroundLight,
         surface: surfaceLight,
       ),
       textTheme: GoogleFonts.lexendTextTheme().copyWith(

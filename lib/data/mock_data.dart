@@ -1,3 +1,9 @@
+// data/mock_data.dart
+// 
+// Purpose: Temporary data repository for the application.
+// Responsibility: Provides mock Hostel and Room models and static data for testing UI screens.
+
+/// Represents a single Hostel building.
 class Hostel {
   final String id;
   final String name;

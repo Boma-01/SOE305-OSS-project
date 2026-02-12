@@ -1,7 +1,14 @@
+// presentation/screens/registration_screen.dart
+// 
+// Purpose: New user onboarding.
+// Responsibility: Collects student details (Reg No, Dept, etc.) for account creation.
+// Navigation: Success -> Back to SignInScreen
+
 import 'package:flutter/material.dart';
 import '../../core/theme/app_theme.dart';
-import '../../data/mock_data.dart';
 
+/// Detailed registration form for new students.
+// [LABEL: REGISTRATION SCREEN] - For new student signup.
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
 
@@ -16,7 +23,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
     
     return Scaffold(
       body: SafeArea(

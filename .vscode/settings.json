@@ -1,0 +1,11 @@
+{
+  "C_Cpp.errorSquiggles": "disabled",
+  "files.exclude": {
+    "linux": true,
+    "macos": true,
+    "ios": true,
+    "android": false,
+    "windows": false,
+    "test": false
+  }
+}

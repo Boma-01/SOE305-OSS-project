@@ -1,8 +1,16 @@
+// presentation/screens/hostel_gallery_screen.dart
+// 
+// Purpose: Main dashboard for authenticated users.
+// Responsibility: Displays a scrollable feed of available hostels and university branding.
+// Navigation: Hostel Card Click -> HostelDetailsScreen
+
 import 'package:flutter/material.dart';
 import '../../core/theme/app_theme.dart';
 import '../../data/mock_data.dart';
-import 'hostel_details_screen.dart'; // Navigate to Room List (Screen 5)
+import 'hostel_details_screen.dart'; 
 
+/// Browsable gallery of hostels with availability status.
+// [LABEL: HOSTEL GALLERY SCREEN] - Dashboard showing available hostels.
 class HostelGalleryScreen extends StatelessWidget {
   const HostelGalleryScreen({super.key});
 
@@ -93,7 +101,7 @@ class HostelGalleryScreen extends StatelessWidget {
                       ),
                       boxShadow: [
                          BoxShadow(
-                           color: Colors.black.withOpacity(0.05),
+                           color: Colors.black.withValues(alpha: 0.05),
                            blurRadius: 2,
                          ),
                       ],
@@ -117,7 +125,7 @@ class HostelGalleryScreen extends StatelessWidget {
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                   decoration: BoxDecoration(
-                                    color: _getStatusColor(hostel.availabilityStatus).withOpacity(0.9),
+                                    color: _getStatusColor(hostel.availabilityStatus).withValues(alpha: 0.9),
                                     borderRadius: BorderRadius.circular(12),
                                   ),
                                   child: Text(

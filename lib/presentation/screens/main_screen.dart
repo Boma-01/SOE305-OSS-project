@@ -1,7 +1,14 @@
+// presentation/screens/main_screen.dart
+// 
+// Purpose: Bottom navigation wrapper.
+// Responsibility: Manages the navigation between Home, Bookings, and Profile tabs.
+
 import 'package:flutter/material.dart';
 import '../../core/theme/app_theme.dart';
 import 'hostel_gallery_screen.dart';
 
+/// App shell containing top-level navigation (Tabs).
+// [LABEL: MAIN SCREEN] - Controls the bottom navigation bar.
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
@@ -18,11 +25,6 @@ class _MainScreenState extends State<MainScreen> {
     const ProfileScreen(),
   ];
 
-  final List<String> _titles = [
-    'Hostel Gallery',
-    'My Bookings',
-    'Profile',
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -117,7 +119,7 @@ class ProfileScreen extends StatelessWidget {
           Center(
             child: CircleAvatar(
               radius: 50,
-              backgroundColor: AppTheme.primaryColor.withOpacity(0.1),
+              backgroundColor: AppTheme.primaryColor.withValues(alpha: 0.1),
               child: const Icon(Icons.person, size: 60, color: AppTheme.primaryColor),
             ),
           ),

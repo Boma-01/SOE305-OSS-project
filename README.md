@@ -30,19 +30,18 @@ A Flutter application for the Federal University of Technology, Owerri (FUTO) ho
     *   **Description**: Detailed view of a specific room.
     *   **Features**: Image header, Amenities grid, Description, "Book Now" action.
 
-## Project Structure
+## Project Architecture
 
-```
-lib/
-├── core/
-│   └── theme/
-│       └── app_theme.dart       # FUTO Colors & Google Fonts
-├── data/
-│   └── mock_data.dart           # Mock Hostels & Rooms data
-├── presentation/
-│   └── screens/                 # All 6 Screens
-└── main.dart                    # App Entry Point
-```
+The project follows a modular structure to ensure different group members can work on different layers simultaneously:
+
+- **`lib/core/`**: Shared utilities and global configurations.
+    - `theme/app_theme.dart`: Centralized FUTO branding (colors, typography, widget styles).
+- **`lib/data/`**: Data models and repositories.
+    - `mock_data.dart`: Static data for testing screens without a backend.
+- **`lib/presentation/`**: All UI-related code.
+    - `screens/`: Individual app pages (Splash, Sign In, Gallery, etc.).
+    - `widgets/`: Reusable UI components (Headers, Custom Buttons).
+- **`lib/main.dart`**: Application entry point and configuration.
 
 ## How to Run
 

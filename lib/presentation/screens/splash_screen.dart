@@ -1,8 +1,15 @@
+// presentation/screens/splash_screen.dart
+// 
+// Purpose: Initial screen shown when the app launches.
+// Responsibility: Displays university branding and performs background initialization/delay.
+// Navigation: Success -> SignInScreen
+
 import 'dart:async';
 import 'package:flutter/material.dart';
-import '../../data/mock_data.dart';
 import 'sign_in_screen.dart';
 
+/// Animated entry screen with university logo and green theme.
+// [LABEL: SPLASH SCREEN] - The first thing users see.
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -31,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
           height: 150,
           decoration: const BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.white,
+            color: Colors.white, // In case image has transparency
           ),
           clipBehavior: Clip.antiAlias,
           child: Image.asset(

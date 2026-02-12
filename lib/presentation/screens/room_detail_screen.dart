@@ -1,7 +1,15 @@
+// presentation/screens/room_detail_screen.dart
+// 
+// Purpose: Final room showcase and booking.
+// Responsibility: Displays detailed amenities, description, and pricing for a specific room.
+// Action: "Book Now" SnackBar placeholder.
+
 import 'package:flutter/material.dart';
 import '../../core/theme/app_theme.dart';
 import '../../data/mock_data.dart';
 
+/// Comprehensive room view with booking call-to-action.
+// [LABEL: ROOM DETAIL SCREEN] - Detailed view of a single room.
 class RoomDetailScreen extends StatelessWidget {
   final Room? room; // Allow null and use mock default for showcase
 
@@ -23,7 +31,7 @@ class RoomDetailScreen extends StatelessWidget {
                 SliverAppBar(
                   expandedHeight: 320,
                   pinned: true,
-                  backgroundColor: isDark ? const Color(0xFF0F230F).withOpacity(0.9) : Colors.white.withOpacity(0.9),
+                  backgroundColor: isDark ? const Color(0xFF0F230F).withValues(alpha: 0.9) : Colors.white.withValues(alpha: 0.9),
                   iconTheme: IconThemeData(color: isDark ? Colors.white : const Color(0xFF1E293B)),
                   flexibleSpace: FlexibleSpaceBar(
                     background: Stack(
@@ -51,7 +59,7 @@ class RoomDetailScreen extends StatelessWidget {
                           child: Container(
                             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                             decoration: BoxDecoration(
-                              color: isDark ? Colors.black87 : Colors.white.withOpacity(0.9),
+                              color: isDark ? Colors.black87 : Colors.white.withValues(alpha: 0.9),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: const Row(
@@ -173,11 +181,11 @@ class RoomDetailScreen extends StatelessWidget {
                           childrenDelegate: SliverChildListDelegate([
                             _buildAmenity(Icons.wifi, 'Free WiFi', context),
                             _buildAmenity(Icons.mode_fan_off, 'Ceiling Fan', context),
-                            _buildAmenity(Icons.desk, 'Study Desk', context), // using desk if avail
+                            _buildAmenity(Icons.table_restaurant, 'Study Desk', context), // using table_restaurant
                             _buildAmenity(Icons.bathtub, 'En-suite', context),
                             _buildAmenity(Icons.bolt, '24/7 Power', context),
                             _buildAmenity(Icons.local_laundry_service, 'Laundry', context),
-                            _buildAmenity(Icons.shelves, 'Storage', context), // using shelves
+                            _buildAmenity(Icons.inventory_2, 'Storage', context), // using inventory_2
                             _buildSeeAll(context),
                           ]),
                         ),
@@ -224,7 +232,7 @@ class RoomDetailScreen extends StatelessWidget {
                             icon: const Icon(Icons.map),
                             label: const Text('View on Campus Map'),
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white.withOpacity(0.2),
+                              backgroundColor: Colors.white.withValues(alpha: 0.2),
                               foregroundColor: Colors.white,
                               elevation: 0,
                               side: const BorderSide(color: Colors.white54),
