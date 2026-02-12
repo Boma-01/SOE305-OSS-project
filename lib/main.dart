@@ -1,5 +1,5 @@
 // main.dart
-// 
+//
 // Purpose: Entry point for the FUTO Hostel Reservation application.
 // Responsibility: Initializes the Flutter app and sets the root widget (HostelReservationApp).
 
