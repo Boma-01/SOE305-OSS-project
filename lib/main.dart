@@ -6,6 +6,8 @@
 import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart';
 import 'presentation/screens/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() {
   runApp(const HostelReservationApp());
@@ -25,4 +27,10 @@ class HostelReservationApp extends StatelessWidget {
       home: const SplashScreen(),
     );
   }
+}
+
+Future<void> initializeFirebase() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(const HostelReservationApp());
 }
