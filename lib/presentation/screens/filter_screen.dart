@@ -3,6 +3,7 @@
 // i used an array of elements in my implementation please connect it to the database or the mock_data.dart
 
 import 'package:flutter/material.dart';
+import 'room_detail_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -150,7 +151,7 @@ class _FilterPageState extends State<FilterPage> {
                       SizedBox(
                         height: isMobile ? 60 : 80,
                         child: Image.asset(
-                          "assets/images/futo_logo.png",
+                          "assets/images/logo.png",
                           fit: BoxFit.contain,
                         ),
                       ),
@@ -312,7 +313,14 @@ class _FilterPageState extends State<FilterPage> {
                                           SizedBox(
                                             width: double.infinity,
                                             child: ElevatedButton(
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                Navigator.of(context).push(
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        RoomDetailScreen( ),
+                                                  ),
+                                                );
+                                              },
                                               style: ElevatedButton.styleFrom(
                                                 padding:
                                                     const EdgeInsets.symmetric(

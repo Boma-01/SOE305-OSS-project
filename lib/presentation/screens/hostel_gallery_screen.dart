@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 import '../../core/theme/app_theme.dart';
 import '../../data/mock_data.dart';
-import 'hostel_details_screen.dart'; 
+import 'filter_screen.dart';
 
 
 /// Browsable gallery of hostels with availability status.
@@ -89,7 +89,8 @@ class HostelGalleryScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => HostelDetailsScreen(hostel: hostel),
+                        
+                        builder: (context) => const FilterPage(),
                       ),
                     );
                   },
