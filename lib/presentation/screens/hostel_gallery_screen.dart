@@ -9,6 +9,7 @@ import '../../core/theme/app_theme.dart';
 import '../../data/mock_data.dart';
 import 'hostel_details_screen.dart'; 
 
+
 /// Browsable gallery of hostels with availability status.
 // [LABEL: HOSTEL GALLERY SCREEN] - Dashboard showing available hostels.
 class HostelGalleryScreen extends StatelessWidget {
