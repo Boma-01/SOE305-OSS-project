@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF008000), // FUTO Green
+      backgroundColor: const Color.fromARGB(255, 18, 118, 184), // FUTO Green
       body: Center(
         child: Container(
           width: 150,
